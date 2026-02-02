@@ -1,11 +1,13 @@
 import express from "express";
 const app = express();
 
-// 🔹 Redirige tout vers ton bot HTTP
+// 🔹 Redirige toutes les requêtes vers ton bot HTTP
 app.get("*", (req, res) => {
-  res.redirect("fi2.bot-hosting.net:20351/");
+  res.redirect("http://fi2.bot-hosting.net:20351/");
 });
 
-// 🔹 Render fournit automatiquement le port via process.env.PORT
+// 🔹 Port automatique (Render / Railway / Vercel)
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Redirect server running on port ${PORT}`));
+app.listen(PORT, () => {
+  console.log(`Redirect server running on port ${PORT}`);
+});
