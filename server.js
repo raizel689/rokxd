@@ -3,7 +3,7 @@ const app = express();
 
 // 🔹 Redirige tout vers ton bot HTTP
 app.get("*", (req, res) => {
-  res.redirect("http://fi5.bot-hosting.net:20664/");
+  res.redirect("fi2.bot-hosting.net:20351/");
 });
 
 // 🔹 Render fournit automatiquement le port via process.env.PORT
